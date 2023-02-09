@@ -112,6 +112,25 @@ class HomePage extends StatelessWidget {
               const SizedBox(
                 height: 16,
               ),
+              AnimatedButton(
+                text: "NoHeader Dialog",
+                color: Colors.cyan.shade900,
+                pressEvent: () {
+                  AwesomeDialog(
+                    context: context,
+                    dialogType: DialogType.noHeader,
+                    animType: AnimType.bottomSlide,
+                    showCloseIcon: true,
+                    title: "NoHeader",
+                    desc: "This is the description of the awesome dialog box",
+                    btnOkOnPress: () {},
+                    btnCancelOnPress: () {},
+                  ).show();
+                },
+              ),
+              const SizedBox(
+                height: 16,
+              ),
             ],
           ),
         ),
